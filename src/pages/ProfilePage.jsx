@@ -1,7 +1,14 @@
-import React from "react";
+import Hader from "../components/common/Hader";
 
 const ProfilePage = () => {
-  return <div>prfile pages</div>;
+  return (
+    <div>
+      <div>
+        <Hader />
+        profile
+      </div>
+    </div>
+  );
 };
 
 export default ProfilePage;
