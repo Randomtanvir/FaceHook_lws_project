@@ -28,7 +28,6 @@ const ProfileImg = () => {
         formData
       );
       if (response.status === 200) {
-        console.log(response.data);
         dispatch({
           type: actions.profile.IMAGE_UPDATE,
           data: response.data,
