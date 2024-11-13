@@ -6,6 +6,7 @@ import { actions } from "../actions/actions";
 import ProfileImg from "../components/profile/ProfileImg";
 import ProfileInfo from "../components/profile/ProfileInfo";
 import ProfileBio from "../components/profile/ProfileBio";
+import MyPosts from "../components/profile/MyPosts";
 
 const ProfilePage = () => {
   const { api } = useAxios();
@@ -47,6 +48,9 @@ const ProfilePage = () => {
         <ProfileInfo />
         <ProfileBio />
         <div className="w-3/4 border-b border-[#3F3F3F] py-6 lg:py-8"></div>
+        <dir>
+          <MyPosts />
+        </dir>
       </div>
       {/* comments */}
     </>
