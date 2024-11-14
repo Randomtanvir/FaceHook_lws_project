@@ -5,9 +5,11 @@ import EditIcon from "../../assets/icons/edit.svg";
 import DeleteIcon from "../../assets/icons/delete.svg";
 import { getDateDifferenceFromNow } from "../../utils";
 import useAvater from "../../hooks/useAvater";
+import { useState } from "react";
 
 const PostHeader = ({ post }) => {
   const { avaterURL } = useAvater(post);
+  const [toggle, setToggle] = useState(false);
   return (
     <header className="flex items-center justify-between gap-4">
       <div className="flex items-center gap-3">
@@ -28,11 +30,11 @@ const PostHeader = ({ post }) => {
       </div>
 
       <div className="relative">
-        <button>
+        <button onClick={() => setToggle(!toggle)}>
           <img src={ThreeDot} alt="3dots of Action" />
         </button>
 
-        <div className="action-modal-container hidden">
+        <div className={`action-modal-container ${!toggle && "hidden"}`}>
           <button className="action-menu-item hover:text-lwsGreen">
             <img src={EditIcon} alt="Edit" />
             Edit
