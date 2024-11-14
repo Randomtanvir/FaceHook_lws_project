@@ -10,7 +10,7 @@ const PostCard = ({ post }) => {
     <article className="card mt-6 lg:mt-8">
       <PostHeader post={post} />
       <PostBody poster={post?.image} content={post.content} />
-      <PostAction postID={post?.id} postCommentCount={post?.comments?.length} />
+      <PostAction post={post} postCommentCount={post?.comments?.length} />
       <PostComments post={post} />
     </article>
   );
